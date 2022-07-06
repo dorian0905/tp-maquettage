@@ -1,3 +1,5 @@
+$bp: 400px;
+
 html {
     height: 100vh;
 }
@@ -24,6 +26,12 @@ body {
     background-size: cover;
     position: relative;
     display: flex;
+    @media (max-width: $bp) {
+        width: 95%;
+        height: 98%;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+    }
 }
 
 .text-container {
@@ -31,19 +39,32 @@ body {
     align-self: flex-end;
     width: 60%;
     height: 40%;
+    @media (max-width: $bp) {
+        width: 100%;
+        height: auto;
+    }
 }
 
 .text {
     color: white;
     padding: 50px 100px;
+    @media (max-width: $bp) {
+        padding: 10px;
+    }
     &__title {
         font-size: 3em;
         font-weight: bold;
         margin: 0 0 16px 10px;
+        @media (max-width: $bp) {
+            font-size: 1.2em;
+        }
     }
     &__content {
-        font-size: 1.5em;
+        font-size: 1.2em;
         line-height: 1.5em;
+        @media (max-width: $bp) {
+            font-size: 1em;
+        }
     }
 }
 
@@ -51,40 +72,72 @@ body {
     z-index: 1;
     align-self: center;
     width: 30%;
-    height: 60%;
+    height: 500px;
+    @media (max-width: $bp) {
+        width: 80%;
+        margin-top: 20px;
+    }
 }
 
 .form {
     height: 100%;
     background-color: white;
-    padding: 50px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: $bp) {
+        height: auto;
+        padding: 20px;
+    }
     &__title {
         font-size: 2em;
         font-weight: bold;
         text-align: center;
+        @media (max-width: $bp) {
+            font-size: 1.2em;
+        }
     }
     &__content {
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
+        @media (max-width: $bp) {
+            margin-top: 20px;
+        }
         &__label {
             font-size: 1.5em;
             margin-bottom: 10px;
+            @media (max-width: $bp) {
+                font-size: 1em;
+            }
         }
         &__input {
             margin-bottom: 20px;
             width: 100%;
             height: 2em;
+            padding: 10px;
+        }
+        &__submit {
+            width: 80%;
+            padding: 7px 0;
+            margin-top: 20px;
+            cursor: pointer;
+            @media (max-width: $bp) {
+                padding: 4px 0;
+                margin: 10px 0;
+                font-size: 0.8em;
+            }
         }
     }
     &__link {
         & a:hover {
             text-decoration: underline;
+        }
+        @media (max-width: $bp) {
+            font-size: 0.8em;
         }
     }
 }
@@ -92,7 +145,10 @@ body {
 .bloc {
     position: absolute;
     width: 100%;
-    height: 40%;
+    height: 35%;
     bottom: 0;
     background-color: rgb(13, 18, 145);
+    @media (max-width: $bp) {
+        height: 32%;
+    }
 }

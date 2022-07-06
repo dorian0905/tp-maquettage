@@ -50,6 +50,14 @@ body {
   position: relative;
   display: flex;
 }
+@media (max-width: 400px) {
+  .window {
+    width: 95%;
+    height: 98%;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+  }
+}
 
 .text-container {
   z-index: 1;
@@ -57,41 +65,79 @@ body {
   width: 60%;
   height: 40%;
 }
+@media (max-width: 400px) {
+  .text-container {
+    width: 100%;
+    height: auto;
+  }
+}
 
 .text {
   color: white;
   padding: 50px 100px;
+}
+@media (max-width: 400px) {
+  .text {
+    padding: 10px;
+  }
 }
 .text__title {
   font-size: 3em;
   font-weight: bold;
   margin: 0 0 16px 10px;
 }
+@media (max-width: 400px) {
+  .text__title {
+    font-size: 1.2em;
+  }
+}
 .text__content {
-  font-size: 1.5em;
+  font-size: 1.2em;
   line-height: 1.5em;
+}
+@media (max-width: 400px) {
+  .text__content {
+    font-size: 1em;
+  }
 }
 
 .form-container {
   z-index: 1;
   align-self: center;
   width: 30%;
-  height: 60%;
+  height: 500px;
+}
+@media (max-width: 400px) {
+  .form-container {
+    width: 80%;
+    margin-top: 20px;
+  }
 }
 
 .form {
   height: 100%;
   background-color: white;
-  padding: 50px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 400px) {
+  .form {
+    height: auto;
+    padding: 20px;
+  }
+}
 .form__title {
   font-size: 2em;
   font-weight: bold;
   text-align: center;
+}
+@media (max-width: 400px) {
+  .form__title {
+    font-size: 1.2em;
+  }
 }
 .form__content {
   width: 100%;
@@ -99,25 +145,59 @@ body {
   flex-direction: column;
   align-items: center;
 }
+@media (max-width: 400px) {
+  .form__content {
+    margin-top: 20px;
+  }
+}
 .form__content__label {
   font-size: 1.5em;
   margin-bottom: 10px;
+}
+@media (max-width: 400px) {
+  .form__content__label {
+    font-size: 1em;
+  }
 }
 .form__content__input {
   margin-bottom: 20px;
   width: 100%;
   height: 2em;
+  padding: 10px;
+}
+.form__content__submit {
+  width: 80%;
+  padding: 7px 0;
+  margin-top: 20px;
+  cursor: pointer;
+}
+@media (max-width: 400px) {
+  .form__content__submit {
+    padding: 4px 0;
+    margin: 10px 0;
+    font-size: 0.8em;
+  }
 }
 .form__link a:hover {
   text-decoration: underline;
+}
+@media (max-width: 400px) {
+  .form__link {
+    font-size: 0.8em;
+  }
 }
 
 .bloc {
   position: absolute;
   width: 100%;
-  height: 40%;
+  height: 35%;
   bottom: 0;
   background-color: #0d1291;
+}
+@media (max-width: 400px) {
+  .bloc {
+    height: 32%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
